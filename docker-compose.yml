@@ -1,0 +1,12 @@
+version: '3'
+services:
+  angular-ui:
+    build:
+      context: ./gh-portfolio
+      dockerfile: dockerfile
+    ports:
+      - "4201:4201"
+    container_name: angular-ui
+    volumes:
+       - ./gh-portfolio:/usr/src/app/gh-portfolio
+       - /usr/src/app/gh-portfolio/node_modules
